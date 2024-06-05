@@ -310,7 +310,7 @@ body {
   justify-content: center;
   align-items: center;
   transition: opacity 0.3s ease;
-  background: url(/img/desktop/desktop-landing.png);
+  background: url(../img/desktop/desktop-landing.png);
   overflow: hidden;
   z-index: 1002;
 }
@@ -398,42 +398,42 @@ body {
   content: "";
   background-size: cover;
   background-position: center;
-  background-image: url(/img/sidebar-galery/sobre-mi.png);
+  background-image: url(../img/sidebar-galery/sobre-mi.png);
 }
 
 .sidebar-block--ilustraciones:hover {
   content: "";
   background-size: cover;
   background-position: center;
-  background-image: url(/img/sidebar-galery/ilustraciones.png);
+  background-image: url(../img/sidebar-galery/ilustraciones.png);
 }
 
 .sidebar-block--sketch-pages:hover {
   content: "";
   background-size: cover;
   background-position: center;
-  background-image: url(/img/sidebar-galery/sketch-pages.png);
+  background-image: url(../img/sidebar-galery/sketch-pages.png);
 }
 
 .sidebar-block--storyboard:hover {
   content: "";
   background-size: cover;
   background-position: center;
-  background-image: url(/img/sidebar-galery/storyboard.png);
+  background-image: url(../img/sidebar-galery/storyboard.png);
 }
 
 .sidebar-block--proyectos:hover {
   content: "";
   background-size: cover;
   background-position: center;
-  background-image: url(/img/sidebar-galery/proyectos.png);
+  background-image: url(../img/sidebar-galery/proyectos.png);
 }
 
 .sidebar-block--contactame:hover {
   content: "";
   background-size: cover;
   background-position: center;
-  background-image: url(/img/sidebar-galery/contactame.png);
+  background-image: url(../img/sidebar-galery/contactame.png);
 }
 
 .sidebar-block img {
