@@ -11,34 +11,14 @@
 
 </head>
 <body>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const linksWithId = document.querySelectorAll('a[href^="#"]');
-    
-          linksWithId.forEach(link => {
-            link.addEventListener('click', (event) => {
-              event.preventDefault(); // Prevent default scrolling behavior
-              const targetId = link.getAttribute('href').substring(1);
-              const targetElement = document.getElementById(targetId);
-              if (targetElement) {
-                scrollToElement(targetElement);
-              }
-            });
-          });
-    
-          function scrollToElement(element) {
-            const scrollTop = element.offsetTop;
-            window.scrollTo({
-              top: scrollTop,
-              behavior: 'smooth'
-            });
-          }
-        });
-      </script>
+  
 
 
-    <section class="landing">
+    <section id="landing" class="landing">
       
+
+
+
       <div class="mouse-pointer"></div>
       <script>
  document.addEventListener('DOMContentLoaded', function() {
@@ -226,7 +206,7 @@
                         <div class="wrapper-inner1">
 
                           <div class="carousel-item carousel-item--jadelayla">
-                            <img  class="carousel-image carousel-image--jadelayla" src="img/desktop/ilustracion/desktop-jadelayla.png" alt="Jade y Layla">
+                            <img  class="carousel-image carousel-image--jadelayla" src="img/desktop/ilustracion/desktop-jadelayla.png" data-src="img/desktop/ilustracion/desktop-jadelayla.png" alt="Jade y Layla">
                             <p class="carousel-title carousel-title--jadelayla">Jade y Layla</p>
                             <span class="carousel-caption carousel-caption--jadelayla">ft @johanamarcela04 (Instagram)</span>
                           </div>
@@ -291,7 +271,6 @@
 
 
 
-                      
 
 
 
@@ -299,7 +278,6 @@
 
 
                 </div>
-
 
             </section>
 
@@ -590,6 +568,7 @@
     </section>
 
 
+
     
    
     <script>
@@ -628,6 +607,9 @@
             document.addEventListener('mouseup', handleDragEnd); // Add this line
         });
     </script>    
-        
+    
+
+
+
 </body>
 </html>

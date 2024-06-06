@@ -279,15 +279,38 @@
   margin: 0px;
   box-sizing: border-box;
   text-decoration: none;
+  scroll-behavior: smooth;
   user-select: none;
 }
 
 body {
   /* overflow-y: hidden; Hide vertical scrollbar */
   /* overflow-x: hidden; Hide horizontal scrollbar */
- overflow: hidden;
+ 
+  overflow-x: hidden;
   background-color: var(--primitives-coal-950);
   font-family: Helvetica;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Hide scrollbar track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Hide scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Hide scrollbar corner */
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 .mouse-pointer {
@@ -388,10 +411,11 @@ body {
   align-items: center;
   color: var(--primitives-grayscale-50);
   font-weight: var(--sizes-desktop-sidebar-s);
-  z-index: 1;
+  z-index: 10;
   border-top: 1px solid var(--primitives-grayscale-50);
   border-bottom: 1px solid var(--primitives-grayscale-50);
   overflow: hidden;
+  position: relative;
 }
 
 .sidebar-block--sobre-mi:hover {
@@ -399,7 +423,32 @@ body {
   background-size: cover;
   background-position: center;
   background-image: url(../img/sidebar-galery/sobre-mi.png);
+  z-index: 5;
 }
+
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* PROBANDO ANIMACIONES, LO DEJÉ POR SI ACASO */
+
+
 
 .sidebar-block--ilustraciones:hover {
   content: "";
@@ -407,6 +456,7 @@ body {
   background-position: center;
   background-image: url(../img/sidebar-galery/ilustraciones.png);
 }
+
 
 .sidebar-block--sketch-pages:hover {
   content: "";
@@ -892,10 +942,43 @@ height: min-content;
 
 .contact-info{
   display: flex;
-  flex-direction: col;
   align-items: center;
   gap: 20px;
+  padding-right: 24px;
+  transition: box-shadow 0.3s ease-in-out;
 }
+
+.contact-info:hover {
+  box-shadow: 0px 0px 50px rgba(232, 233, 237, 0.3);
+}
+
+.contact-info:not(:hover) {
+  box-shadow: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.contact-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  box-shadow: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.contact-info:hover::before {
+  box-shadow: 0px 0px 50px rgba(232, 233, 237, 0.3));
+}
+
+.contact-info:not(:hover)::before {
+  box-shadow: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+
 .contact-info__image{
   height: 150px;
 }
@@ -903,3 +986,6 @@ height: min-content;
 .gif--mail, .gif--phone, .gif--behance, .gif--discord{
   height: 100%;
 }
+
+
+
