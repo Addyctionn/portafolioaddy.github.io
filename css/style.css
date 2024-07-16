@@ -794,6 +794,16 @@ width: 100%;
   pointer-events: none;
 }
 
+.carousel-image--page0, .carousel-image--page1, .carousel-image--page2{
+  width: auto;
+  height: 700px;
+}
+
+.carousel-caption--page0, .carousel-caption--page1, .carousel-caption--page2{
+  padding: 0px 24px 0px 32px;
+}
+
+
 .main__section--proyectos{
   display: flex;
   padding: 0;
