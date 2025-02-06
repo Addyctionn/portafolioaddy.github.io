@@ -676,7 +676,7 @@ body {
   flex-wrap: nowrap;
   max-width: 100vw;
   padding-top: 100px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   padding-left: 380px;
   justify-content: center;
   gap: 48px;
@@ -765,7 +765,7 @@ width: 100%;
   flex-wrap: nowrap;
   max-width: 100vw;
   padding-top: 100px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   padding-left: 380px;
   justify-content: center;
   gap: 48px;
@@ -781,6 +781,7 @@ width: 100%;
 
 .main__section--storyboard{
   display: flex;
+  
   padding: 0;
 
 }
@@ -791,15 +792,16 @@ width: 100%;
   flex-wrap: nowrap;
   max-width: 100vw;
   padding-top: 100px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   padding-left: 380px;
   justify-content: center;
-  gap: 48px;
+  gap: 64px;
   flex-direction: column;
 }
 
 .wrapper-inner3 {
   display: flex;
+  gap: 24px;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   pointer-events: none;
@@ -827,23 +829,32 @@ width: 100%;
   flex-wrap: nowrap;
   max-width: 100vw;
   padding-top: 100px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   padding-left: 380px;
   justify-content: center;
   gap: 24px;
   flex-direction: column;
 }
 
-.content__extra--naocchi{
+.content__extra--vtuber{
 display: flex;
 flex-direction: column;
 width: 650px;
 gap: 12px;
 }
 
+
+
 .content__proyectos{
   display: flex;
-  gap: 124px;
+  flex-direction: column;
+  gap: 128px;
+}
+
+
+.content__proyectos--vtuber{
+  display: flex;
+  gap: 112px;
 }
 
 .image-container-proyectos{
@@ -868,7 +879,13 @@ gap: 12px;
   color: var(--primitives-grayscale-50);
 }
 .extra__text{
-  font-weight: 400;
+  font-weight: 300;
+  font-size: var(--sizes-desktop-body-l);
+  color: var(--primitives-grayscale-50);
+}
+
+.extra__text--bold{
+  font-weight: 700;
   font-size: var(--sizes-desktop-body-l);
   color: var(--primitives-grayscale-50);
 }
@@ -916,7 +933,7 @@ height: min-content;
   flex-wrap: nowrap;
   max-width: 100vw;
   padding-top: 100px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   padding-left: 380px;
   padding-right: 164px;
   justify-content: center;
@@ -1009,7 +1026,7 @@ height: min-content;
 }
 
 
-.animacion-putrefaccion{
+.animacion-label{
   display: flex;
   gap: 24px;
   align-items: center;
@@ -1021,9 +1038,8 @@ height: min-content;
 .animacion-link{
   display: flex;
   align-items: center;
-  width: 400px;
+  width: min-content;
   gap: 20px;
-  padding: 12px;
   margin-left: 48px;
   transition: box-shadow 0.3s ease-in-out;
 }
@@ -1068,13 +1084,32 @@ height: min-content;
   opacity: 1;
   
 }
+
 .animacion-info{
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+}
+
+.animacion-title{
+
+  color: var(--primitives-coal-50);
+  font-size: 64px;
+
+
+
+}
+
+.animacion-text{
+  width: 600px;
 font-family: Comic Neue;
 font-weight: 400;
 font-style: normal;
-font-size: var(caption-m-regular-font-size);
+font-size: 18px;
 color: var(--primitives-coal-50);
 display: flex;
-text-align: center;
+
 opacity: 1;
 }
